@@ -8,7 +8,7 @@ en que se registran las compras de los materiales, ordenes de compra y
 procesos de producción hasta la entrega del producto al cliente
 
 ## DIAGRAMA DE CLASES
-![UML GESTION FABRICA DE MUEBLES](https://github.com/rramirezg18/FabricaDeMuebles/blob/main/UML%20Fabrica%20De%20Muebles.png)
+![UML GESTION FABRICA DE MUEBLES](https://github.com/rramirezg18/Proyecto1/blob/main/UML%20-%20Proyecto%201.jpg)
 
 
 Se puede ver en en el diagrama de clases que el programa cuenta con la clase Material que permite gestionar los atributos
