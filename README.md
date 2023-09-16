@@ -1,4 +1,4 @@
-# Proyecto1
+# Proyecto No.1 - Fabrica De Sillas
 Gestion De Fabrica De Sillas
 
 El presente proyecto fue desarrollado en lenguage de programacion JAVA.
