@@ -1,4 +1,14 @@
+/**Proyecto 1 - Gestion De Fabrica De Sillas
+ *
+ *Clase principal del proyecto
+ *
+ * @author Roberto Ramírez 7690-22-12700
+ */
+
+
 import java.util.*;
+
+
 public class FabricaDeSillas {
 
 	public static void main(String[] args) {

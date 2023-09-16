@@ -1,3 +1,10 @@
+/**Proyecto 1 - Gestion De Fabrica De Sillas
+ *
+ *Clase invenatario
+ *
+ * @author Roberto Ramírez 7690-22-12700
+ */
+
 import java.util.*;
 public class Inventario {
     private List<Material> materiales = new ArrayList<>();

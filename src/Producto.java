@@ -1,4 +1,9 @@
-
+/**Proyecto 1 - Gestion De Fabrica De Sillas
+ *
+ *Clase producto
+ *
+ * @author Roberto Ramírez 7690-22-12700
+ */
 public class Producto {
     private String codigo;
     private String nombre;

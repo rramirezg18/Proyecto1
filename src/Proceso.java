@@ -1,3 +1,11 @@
+
+/**Proyecto 1 - Gestion De Fabrica De Sillas
+ *
+ *Clase proceso
+ *
+ * @author Roberto Ramírez 7690-22-12700
+ */
+
 import java.util.*;
 public class Proceso implements GestionProcesos {
     private List<Orden> ordenesEnProceso = new ArrayList<>();

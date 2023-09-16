@@ -1,4 +1,11 @@
 
+/**Proyecto 1 - Gestion De Fabrica De Sillas
+ *
+ *Clase Material
+ *
+ * @author Roberto Ramírez 7690-22-12700
+ */
+
 public class Material {
     private String codigo;
     private int cantidad;
