@@ -1,7 +1,7 @@
 # Proyecto No.1 - Fábrica De Sillas
 Gestion De Fabrica De Sillas
 
-El presente proyecto fue desarrollado en lenguage de programacion JAVA.
+El presente proyecto fue desarrollado en lenguage de programación JAVA.
 
 El programa permite la gestión de una fabrica de sillas desde el momento 
 en que se registran las compras de los materiales, ordenes de compra y 
