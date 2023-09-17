@@ -10,7 +10,7 @@ import java.util.*;
 public class Proceso implements GestionProcesos {
     private List<Orden> ordenesEnProceso = new ArrayList<>();
     private List<Orden> ordenesTerminadas = new ArrayList<>(); // Lista de órdenes terminadas
-    
+    float precioTotal = 0.0f;
     
     private List<Orden> ordenes = new ArrayList<>();
     public void registrarOrden(Orden orden) {
@@ -25,9 +25,11 @@ public class Proceso implements GestionProcesos {
 
         if (!ordenExistente) {
             ordenes.add(orden);
-            System.out.println("Orden registrada exitosamente.");
+            System.out.println("......");
+            System.out.println("\tOrden registrada exitosamente.");
         } else {
-            System.out.println("El número de orden ya existe. Ingrese uno nuevo.");
+        	System.out.println("......");
+            System.out.println("\tEl número de orden ya existe. Ingrese uno nuevo.");
         }
     }
     public void verOrdenes() {
@@ -35,7 +37,7 @@ public class Proceso implements GestionProcesos {
     float precioCedro = 40.00f;
     float precioCaoba = 50.00f;
     
-    System.out.println("Órdenes almacenadas:");
+    //System.out.println("Órdenes almacenadas:");
     
     for (Orden ord : ordenes) {
         System.out.println("Número de orden: " + ord.getNumeroOrden());
@@ -43,7 +45,7 @@ public class Proceso implements GestionProcesos {
         System.out.println("NIT del cliente: " + ord.getNitCliente());
         System.out.println("Nombre del cliente: " + ord.getNombreCliente());
         
-        float precioTotal = 0.0f; // Inicializar el precio total de la orden
+        //float precioTotal = 0.0f; // Inicializar el precio total de la orden
         
         for (int i = 0; i < ord.getTiposSillas().length; i++) {
             if (ord.getTiposSillas()[i] != null && ord.getCantidades()[i] > 0) {
@@ -60,10 +62,10 @@ public class Proceso implements GestionProcesos {
                 }
 
                 // Mostrar la cantidad y el precio total en la misma línea separados por guiones
-                System.out.println("Sillas de " + tipoSilla.toLowerCase() + ": " + cantidad + " - Precio total: $" + (cantidad * getPrecioSilla(tipoSilla)));
+                System.out.println("Sillas de " + tipoSilla.toLowerCase() + ": " + cantidad + " - Precio: $" + (cantidad * getPrecioSilla(tipoSilla)));
             }
         }
-        
+        System.out.println("-------------------------------------");
         System.out.println("El precio total de la orden es: $" + precioTotal);
         System.out.println("-------------------------------------");
     }
@@ -142,7 +144,7 @@ private float getPrecioSilla(String tipoSilla) {
                 int cantidadNecesaria = cantidadNecesariaMateriales.getOrDefault(codigo, 0);
                 material.restarCantidad(cantidadNecesaria);
             }
-
+            System.out.println(".....\n");
             System.out.println("La orden " + orden.getNumeroOrden() + " se encuentra en proceso de producción");
         } else {
             System.out.println("No cuentas con los materiales necesarios para iniciar el proceso");
@@ -152,7 +154,7 @@ private float getPrecioSilla(String tipoSilla) {
         if (ordenesEnProceso.isEmpty()) {
             System.out.println("No hay órdenes en proceso.");
         } else {
-            System.out.println("Órdenes en proceso:");
+            //System.out.println("Órdenes en proceso:");
             for (Orden orden : ordenesEnProceso) {
                 System.out.println(orden.toString());
             }
@@ -162,7 +164,7 @@ private float getPrecioSilla(String tipoSilla) {
         Scanner entrada = new Scanner(System.in);
         
         // Mostrar las órdenes en proceso
-        verOrdenesEnProceso();
+        //verOrdenesEnProceso();
         
         // Solicitar al usuario que ingrese el número de orden que desea terminar
         System.out.println("Ingrese el número de orden que desea terminar:");
@@ -183,8 +185,8 @@ private float getPrecioSilla(String tipoSilla) {
             
             // Agregar la orden a la lista de órdenes terminadas
             ordenesTerminadas.add(ordenTerminada);
-            
-            System.out.println("La orden " + numeroOrden + " ha sido movida a productos terminados.");
+            System.out.println(".....\n");
+            System.out.println("!La orden " + numeroOrden + " ha sido fabricada correctamente!");
         } else {
             System.out.println("No se encontró una orden en proceso con el   número de orden ingresado.");
         }
@@ -194,7 +196,7 @@ private float getPrecioSilla(String tipoSilla) {
         if (ordenesTerminadas.isEmpty()) {
             System.out.println("No hay órdenes terminadas.");
         } else {
-            System.out.println("Órdenes Terminadas:");
+            //System.out.println("Órdenes Terminadas:");
             for (Orden orden : ordenesTerminadas) {
                 System.out.println(orden.toString());
             }
@@ -204,10 +206,10 @@ private float getPrecioSilla(String tipoSilla) {
         Scanner entrada = new Scanner(System.in);
 
         // Mostrar las órdenes terminadas
-        verOrdenesTerminadas();
+        //verOrdenesTerminadas();
 
         // Solicitar al usuario que ingrese el número de   a entregar
-        System.out.println("Ingrese el número de orden que desea entregar:");
+        System.out.println("Ingrese el número de orden que desea FACTURAR Y ENTREGAR:");
         String numeroOrden = entrada.nextLine();
 
         // Buscar la orden en productos terminados correspondiente al número de orden ingresado
@@ -227,7 +229,8 @@ private float getPrecioSilla(String tipoSilla) {
             String nitCliente = ordenEntregada.getNitCliente();
             String nombreCliente = ordenEntregada.getNombreCliente();
 
-            System.out.println("La orden de compra " + numeroOrden + " fue entregada y facturada al cliente " + nitCliente + " " + nombreCliente);
+            System.out.println("La orden de compra " + numeroOrden + " fue ENTREGADA y FACTURADA al Cliente " + nombreCliente + " " + nitCliente);
+            System.out.println("El cliente pago un total de: $" + precioTotal);
         } else {
             System.out.println("No se encontró una orden de compra en productos terminados con el número de orden ingresado.");
         }

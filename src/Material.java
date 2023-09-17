@@ -36,7 +36,7 @@ public class Material {
 
     @Override
     public String toString() {
-        return "Material{" + "codigo=" + codigo + ", cantidad=" + cantidad + '}';
+        return "Material -> " + "codigo: " + codigo + "   cantidad: " + cantidad;
     }
     public void restarCantidad(int cantidad) {
         this.cantidad -= cantidad;

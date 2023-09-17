@@ -39,6 +39,8 @@ public class FabricaDeSillas {
                     solicitarCantidad(entrada, inventario, "Caoba");
                     solicitarCantidad(entrada, inventario, "Clavos");
                     solicitarCantidad(entrada, inventario, "Barniz");
+                    System.out.println(".....");
+                    System.out.println("\t¡Materiales Ingresados Exitosamente!\n");
                     break;
                 case 2:
                     System.out.println("\tInventario De Materiales\n");
@@ -132,14 +134,14 @@ public class FabricaDeSillas {
         System.out.println("1. Registrar Compras");
         System.out.println("2. Ver Inventario De Materiales");
         System.out.println("3. Registrar Orden De Compra");
-        System.out.println("4. Ver Ordenes De Compra En Cola");
+        System.out.println("4. Ver Ordenes De Compra Almacenadas");
         System.out.println("5. Iniciar Producción");
         System.out.println("6. Ver Productos En Proceso");
         System.out.println("7. Terminar Producción");
         System.out.println("8. Ver Productos Terminados");
         System.out.println("9. Ventas");
         System.out.println("10. Salir");
-        System.out.println("\nIngresa Una Opción...\n");
+        System.out.println("\nIngresa Una Opción...");
 
     }
     public static void solicitarCantidad(Scanner entrada, Inventario inventario, String material) {
